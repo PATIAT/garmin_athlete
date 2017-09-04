@@ -1,0 +1,90 @@
+#bg {
+  background: url(images/trail_run.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.black-bg {
+  background-color:rgba(0,0,0,0.5);
+}
+
+#main-title {
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+    font-size: 4em;
+}
+
+.under-title {
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 3em;
+}
+
+#brand-type {
+    font-family: 'Playball', cursive;
+}
+
+.type-title {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+.type-title-2 {
+    font-family: 'Oswald', sans-serif;
+    color: black;
+}
+
+.type-title-3 {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 2em;
+}
+
+.type-selector {
+    background-color:rgba(0,0,0,0.5);
+}
+
+.axisColor {
+    color: white;
+}
+
+.xAxisLabel {
+    color: white;
+}
+
+.yAxisLabel {
+    color: white;
+}
+
+.dc-chart g.axis {
+    fill: white;
+}
+
+.dc-chart .axis label {
+    color: white;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-brand>img {
+  height: 100%;
+  padding: 5px 10px;
+  width: auto;
+}
+
+.pagestrap {
+	font-family: 'Oswald', 'bold', sans-serif;
+    color: white;
+}
+
+.link-bg {
+    background-color:rgba(0,0,0,1);;
+}
+
+.tour-button {
+    margin-top: 9px;
+}

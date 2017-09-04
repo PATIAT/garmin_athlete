@@ -1,0 +1,46 @@
+<!--EXTENSION OF LAYOUT HTML TEMPLATE-->
+{% extends "layout.html" %}
+{% block content %}
+<!--EXTENSION OF LAYOUT HTML TEMPLATE-->
+
+
+<!--JUMBOTRON-->
+<div class="container">
+  <div class="row center_content">
+    <div class="col-md-12">
+      <div class="jumbotron black-bg">
+        <h2 id="main-title">WHAT'S THIS ALL ABOUT THEN?</h2>
+        <h3 class="under-title">well...let me explain...</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /END JUMBOTRON-->
+
+
+<!--ABOUT INFO-->
+<div class="container">
+  <div class="row center_content">
+    <div class="col-md-12">
+      <div class="jumbotron black-bg">
+        <p class="type-title-3 text-center">
+          With so much information available these days, it can be difficult to digest it all. Many of us find it easier to absorb the facts and figures through visualisation.
+          This website is a dashboard of my personal exercise activities since 2014 to part way through this year, 2017. All of the activities whether running, cycling or swimming
+          were recorded on a Garmin GPS Smartwatch.
+          <br>
+          <br>
+          The data was downloaded from the Garmin Connect website in csv format and then uploaded to MongoDB. From here the data is broken down using the JavaScript plugin Crossfilter to
+          manipulate the data. Then, using Dc.js and D3.js, another two JavaScript libraries I was able to create a range of innovative graphs and charts.
+          <br>
+          <br>
+          Having been in or around the running, cycling and swimming scene for many years I feel I have a good grasp of what metrics and measurements the average fitness enthusiast
+          wants to see from their Smartwatch or GPS generated data.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /END ABOUT INFO-->
+
+
+{% endblock %}

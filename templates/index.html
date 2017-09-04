@@ -1,0 +1,231 @@
+<!--EXTENSION OF LAYOUT HTML TEMPLATE-->
+{% extends "layout.html" %}
+{% block content %}
+<!--EXTENSION OF LAYOUT HTML TEMPLATE-->
+
+
+<!--JUMBOTRON-->
+<div class="container">
+  <div class="row center_content">
+    <div class="col-md-12">
+      <div class="jumbotron black-bg">
+        <h2 id="main-title">LETS GO ON A JOURNEY</h2>
+        <h3 class="under-title">running, cycling and swimming...</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /END JUMBOTRON-->
+
+<br>
+
+<!-- FIRST ROW -->
+<div class="container">
+  <div class="row center_content">
+    <div class="col-md-12">
+
+<!-- SELECT ACTIVITIES -->
+<div class="col-sm-4">
+  <div class="chart-wrapper black_bg black-bg" data-step="1" data-intro="<h2>Select Activity Type</h2><hr><p>Use this drop-down selector to choose an activity type that filters resuls of all graphs and tables.</p>" style="font-weight: normal" data-position="right">
+    <div class="chart-title black-bg">
+      <span class="type-title"> ACTIVITY TYPE </span>
+    </div>
+    <div class="chart-stage black-bg">
+      <div id="select_activity" class="div-bg type-selector"></div>
+    </div>
+  </div>
+</div>
+<!-- /END SELECT ACTIVITIES -->
+
+<!-- SELECT ACTIVITY YEAR -->
+<div class="col-sm-4">
+  <div class="chart-wrapper black_bg black-bg" data-step="2" data-intro="<h2>Select Activity Year</h2><hr><p>Use this drop-down selector to choose an activity year that filters results of all graphs and tables.</p>" style="font-weight: normal" data-position="left">
+    <div class="chart-title black-bg">
+      <span class="type-title"> ACTIVITY YEAR </span>
+    </div>
+    <div class="chart-stage black-bg">
+      <div id="select_year" class="black-bg type-selector"></div>
+    </div>
+  </div>
+</div>
+<!-- /END SELECT ACTIVITY YEAR -->
+
+<!-- SELECT INOUT DOOR ACTIVITY -->
+<div class="col-sm-4">
+  <div class="chart-wrapper black_bg black-bg" data-step="3" data-intro="<h2>Select Activity Location</h2><hr><p>Use this drop-down selector to choose an activity location that filters results of all graphs and tables.</p>" style="font-weight: normal" data-position="left">
+    <div class="chart-title black-bg">
+      <span class="type-title"> ACTIVITY LOCATION </span>
+    </div>
+    <div class="chart-stage black-bg">
+      <div id="select_inout" class="black-bg type-selector"></div>
+    </div>
+  </div>
+</div>
+<!-- /END SELECT INOUT DOOR ACTIVITY -->
+
+    </div>
+  </div>
+</div>
+<!-- /END FIRST ROW -->
+
+<br>
+
+<!-- SECOND ROW -->
+<div class="container">
+  <div id="pie" class="row center_content">
+    <div class="col-md-12">
+
+<!-- TOTAL ACTIVITIES -->
+<div class="col-sm-12">
+  <div class="chart-wrapper black-bg" data-step="4" data-intro="<h2>Total Activities</h2><hr><p>Here you can see the total amount of activities based on what selector is being used.</p>" style="font-weight: normal" data-position="top">
+    <div class="chart-title black-bg">
+      <span class="type-title">TOTAL NUMBER OF ACTIVITIES</span>
+    </div>
+    <div class="chart-stage black-bg" style="background: rgba(0,0,0,0.5);
+position: relative;
+font-size: 29px;
+color: white;
+vertical-align: middle;
+text-align: center;
+padding-top: 12px;
+padding-bottom: 0;">
+    <div id="number-activities-nd"></div>
+    </div>
+  </div>
+</div>
+<!-- /END TOTAL ACTIVITIES -->
+
+    </div>
+  </div>
+</div>
+<!-- /END SECOND ROW -->
+
+<br>
+
+<!-- THIRD ROW -->
+<div class="container">
+  <div id="pie" class="row center_content">
+    <div class="col-md-12">
+
+<!-- ACTIVITY TYPE -->
+<div class="col-sm-4">
+  <div class="chart-wrapper black-bg" data-step="5" data-intro="<h2>Type of Activity</h2><hr><p>This pie chart allows you to visualise the popularity of an activity type as a proportion of the pie chart.</p>" style="font-weight: normal" data-position="right">
+    <div class="chart-stage center_column">
+      <div id="activity-type-chart"></div>
+    </div>
+    <div class="chart-title black-bg center_content">
+      <span class="type-title"> TYPE OF ACTIVITY </span>
+    </div>
+  </div>
+</div>
+<!-- /END ACTIVITY TYPE -->
+
+<!-- ACTIVITY POPULARITY -->
+<div class="col-sm-4">
+  <div class="chart-wrapper black-bg" data-step="6" data-intro="<h2>Favourite Activity</h2><hr><p>This bar chart allows you to visualise the popularity of an activity from a new angle.</p>" style="font-weight: normal" data-position="left">
+    <div class="chart-stage center_column">
+      <div id="activity-popularity-chart"></div>
+    </div>
+    <div class="chart-title black-bg center_content">
+      <span class="type-title"> FAVOURITE ACTIVITIES </span>
+    </div>
+  </div>
+</div>
+<!-- /END ACTIVITY POPULARITY -->
+
+<!-- YEAR OF ACTIVITY -->
+<div class="col-sm-4">
+  <div class="chart-wrapper black-bg" data-step="7" data-intro="<h2>Activity By Year</h2><hr><p>This chart allows you to see how active or lazy I have been depending on what selector is in use.</p>" style="font-weight: normal" data-position="left">
+    <div class="chart-stage center_column">
+      <div id="activity-year-chart"></div>
+    </div>
+    <div class="chart-title black-bg center_content">
+      <span class="type-title"> ACTIVITY YEARS </span>
+    </div>
+  </div>
+</div>
+<!-- /END YEAR OF ACTIVITY -->
+
+    </div>
+  </div>
+</div>
+<!-- /END THIRD ROW -->
+
+<br>
+
+<!-- FOURTH ROW -->
+<div class="container">
+  <div id="pie" class="row center_content">
+    <div class="col-md-12">
+
+<!-- INDOOR/OUTDOOR BREAKDOWN -->
+<div class="col-sm-4">
+  <div class="chart-wrapper black-bg" data-step="8" data-intro="<h2>Inside or Out?</h2><hr><p>Let's face it outside is always the best but it's not always possible due to the UK weather yaay!</p>" style="font-weight: normal" data-position="right">
+    <div class="chart-stage center_column">
+      <div id="in-out-chart"></div>
+    </div>
+    <div class="chart-title black-bg center_content">
+      <span class="type-title"> INSIDE OR OUT? </span>
+    </div>
+  </div>
+</div>
+<!-- /END INDOOR/OUTDOOR BREAKDOWN -->
+
+<!-- EQUIPMENT USED -->
+<div class="col-sm-4">
+  <div class="chart-wrapper black-bg" data-step="9" data-intro="<h2>What's being used?</h2><hr><p>Running shoes, biked and more running shoes. A retailers ideal victim is a runner/cyclist.</p>" style="font-weight: normal" data-position="left">
+    <div class="chart-stage center_column">
+      <div id="equipment-chart"></div>
+    </div>
+    <div class="chart-title black-bg center_content">
+      <span class="type-title"> TYPE OF EQUIPMENT USED </span>
+    </div>
+  </div>
+</div>
+<!-- /END EQUIPMENT USED -->
+
+<!-- ACTIVITY DISTANCE -->
+<div class="col-sm-4">
+  <div class="chart-wrapper black-bg" data-step="10" data-intro="<h2>How far can I get away with?</h2><hr><p>As they say a mile is better than nothing but 10 is better than 1 too. Every time!.</p>" style="font-weight: normal" data-position="left">
+    <div class="chart-stage center_column">
+      <div id="activity-distance-chart"></div>
+    </div>
+    <div class="chart-title black-bg center_content">
+      <span class="type-title"> ACTIVITY DISTANCE </span>
+    </div>
+  </div>
+</div>
+<!-- /END ACTIVITY DISTANCE -->
+
+    </div>
+  </div>
+</div>
+<!-- /FOURTH ROW -->
+
+<br>
+
+<!-- FITH ROW -->
+<div class="container">
+  <div id="pie" class="row center_content">
+    <div class="col-md-12">
+
+<!-- TIME CHART -->
+<div class="col-sm-12">
+  <div class="chart-wrapper black-bg" data-step="11" data-intro="<h2>Activity Timeline</h2><hr><p>Another way to easily visualise activity intensity. All this activeness is tiring...zzz zz z.</p>" style="font-weight: normal" data-position="left">
+    <div class="chart-stage center_column">
+      <div id="time-chart"></div>
+    </div>
+    <div class="chart-title black-bg center_content">
+      <span class="type-title"> NUMBER OF ACTIVITIES PER YEAR </span>
+    </div>
+  </div>
+</div>
+<!-- /END TIME CHART -->
+
+    </div>
+  </div>
+</div>
+<!-- /END FITH ROW -->
+
+
+{% endblock %}
