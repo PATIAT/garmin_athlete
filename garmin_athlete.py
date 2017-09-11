@@ -7,6 +7,7 @@ from flask import Flask
 from flask import render_template
 from pymongo import MongoClient
 import json
+import os
 
 """
 FLASK INSTANCE
@@ -20,9 +21,8 @@ DB DETAILS
 """
 
 
-MONGODB_HOST = 'localhost'
-MONGODB_PORT = 27017
-DBS_NAME = 'garminAthlete'
+MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://root:passwordX@ds133094.mlab.com:33094/heroku_kbvmqk76')
+DBS_NAME = os.getenv('MONGO_DB_NAME', 'heroku_kbvmqk76')
 COLLECTION_NAME = 'activities'
 
 """
@@ -61,7 +61,7 @@ def athlete_activities():
 
     # Open a connection to MongoDB using a with statement such that the
     # connection will be closed as soon as we exit the with statement
-    with MongoClient(MONGODB_HOST, MONGODB_PORT) as conn:
+    with MongoClient(MONGO_URI) as conn:
         # Define which collection we wish to access
         collection = conn[DBS_NAME][COLLECTION_NAME]
         # Retrieve a result set only with the fields defined in FIELDS
